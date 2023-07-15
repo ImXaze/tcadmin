@@ -1,17 +1,15 @@
-1. Layout: All the .cshtml files share the "_Layout.cshtml" as a common layout file. This file contains the basic structure of the web page including the header, footer, and navigation.
+1. Shared Layout: Both Home.cshtml and _ConsoleEmbed.cshtml will use the _Layout.cshtml for the basic layout structure of the pages.
 
-2. ConsoleEmbed: The "Home.cshtml" file will embed the "_ConsoleEmbed.cshtml" file, which contains the console interface.
+2. Console Embed: The _ConsoleEmbed.cshtml and consoleEmbed.js will share the same DOM elements id names for the console embed functionality. The id names could be "consoleEmbedContainer", "consoleInput", and "consoleOutput".
 
-3. HomeController: The "HomeController.cs" file is shared as it controls the logic for the Home view. It will use the "ServerStats.cs" model to fetch and send server statistics data to the view.
+3. Responsive Design: The responsiveDesign.js and responsiveDesign.css will share the same id names for the elements that need to be responsive. The id names could be "responsiveContainer", "responsiveHeader", "responsiveSidebar", and "responsiveContent".
 
-4. ServerStats: The "ServerStats.cs" model is shared between the "HomeController.cs" and the "Home.cshtml". It defines the data schema for server statistics like RAM, CPU, etc.
+4. Measure RAM and CPU: The measureRamCpu.js will use the id names of the elements where the RAM and CPU measurements will be displayed. The id names could be "ramMeasurement", "cpuMeasurement".
 
-5. site.css: The "site.css" file is shared across all .cshtml files for styling purposes.
+5. Message Names: The consoleEmbed.js and measureRamCpu.js might use the same message names for error handling or user notifications. The message names could be "error", "warning", "info".
 
-6. site.js: The "site.js" file is shared across all .cshtml files for handling dynamic functionalities. It will use the id names of DOM elements from the .cshtml files.
+6. Function Names: The consoleEmbed.js, responsiveDesign.js, and measureRamCpu.js might share some common utility function names. The function names could be "init", "update", "resize", "measure", "display".
 
-7. DOM Element IDs: "consoleEmbed", "ramUsage", "cpuUsage", etc. are shared between "site.js" and .cshtml files for manipulating and displaying data.
+7. Data Schemas: The consoleEmbed.js and measureRamCpu.js might use the same data schemas for the console commands and the system measurements. The data schemas could be "commandSchema", "measurementSchema".
 
-8. Message Names: "fetchServerStats", "updateServerStats" are shared between "HomeController.cs" and "site.js" for AJAX calls.
-
-9. Function Names: "getServerStats()", "updateServerStats()" are shared between "HomeController.cs" and "site.js" for fetching and updating server statistics.
+8. Exported Variables: The consoleEmbed.js, responsiveDesign.js, and measureRamCpu.js might export some variables for other scripts to use. The exported variables could be "consoleEmbedStatus", "responsiveStatus", "measurements".
